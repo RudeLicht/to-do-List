@@ -1,0 +1,341 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #f0f5f5;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+button {
+    color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+#taskCont {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+
+}
+
+
+.note-container {
+    position: absolute;
+    border: 1px solid #cccccc;
+    background-color: hsl(168, 8%, 74%);
+    height: 200px;
+    width: 200px;
+    left: 80%;
+    border: 2px solid #000000;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.noteInput {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border: none;
+    resize: none;
+    outline: none;
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+    border-radius: 5px;
+
+    &:focus {
+        border: none;
+    }
+}
+
+
+h3 {
+    font-size: 25px;
+    text-align: center;
+    color: #555555;
+}
+
+label {
+    font-size: 20px;
+    user-select: none;
+}
+
+#addBtn {
+    font-size: 20px;
+    background-color: #66cc66;
+    border: 1px solid #339933;
+    width: 60px;
+    height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+#addBtn:hover {
+    background-color: #4caf50;
+}
+
+#deleteBtn {
+    font-size: 20px;
+    width: 60px;
+    height: 30px;
+    background-color: rgb(233, 43, 43);
+    border: 1px solid rgb(216, 20, 20);
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+#deleteBtn:hover {
+    background-color: #c82333;
+}
+
+@keyframes go-right {
+    100% {
+        opacity: 0%;
+        transform: translateX(100%);
+    }
+}
+
+.go-left-animation {
+    animation: go-left 1s ease;
+}
+
+@keyframes go-left {
+    0% {
+        opacity: 0%;
+        transform: translateX(100%);
+    }
+
+    100% {
+        opacity: 100%;
+        transform: translateX(0%);
+    }
+}
+
+#noteBtn {
+    background-color: grey;
+    margin-right: 10px;
+
+    &:hover {
+        background-color: rgb(88, 88, 88);
+        cursor: pointer;
+    }
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 10px;
+
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+}
+
+.task-item:hover {
+    background-color: #e8e8e8;
+}
+
+.task-item label {
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+.task-item input[type="checkbox"] {
+
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.task-item button {
+    background-color: #dc3545;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.task-item button:hover {
+    background-color: #c82333;
+}
+
+.pickName {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 2px solid #b3b3b3;
+    border-radius: 15px;
+    padding: 20px;
+    width: 300px;
+    position: fixed;
+    left: 50%;
+    top: 150px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    animation: top-to-bottom 0.6s ease forwards;
+}
+
+.go-to-bottom {
+    animation: top-to-bottom-task 0.6s ease forwards;
+}
+
+@keyframes top-to-bottom-task {
+    0% {
+        opacity: 0%;
+        transform: translateY(-100%);
+    }
+
+    100% {
+        opacity: 100%;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes top-to-bottom {
+    0% {
+        opacity: 0%;
+        transform: translateY(-100%) translateX(-50%);
+    }
+
+    100% {
+        opacity: 100%;
+        transform: translateY(0%) translateX(-50%);
+    }
+}
+
+.pickName p {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333333;
+}
+
+.pickName input {
+    font-size: 16px;
+    text-align: center;
+    width: 80%;
+    height: 30px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    display: block;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.pickName button {
+    background-color: #66cc66;
+    border: 1px solid #339933;
+    border-radius: 8px;
+    width: 100px;
+    height: 35px;
+    margin: 0 auto;
+    display: block;
+    cursor: pointer;
+}
+
+#pickTaskName {
+    display: none;
+}
+
+#pickTaskName p {
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+#pickTaskName a {
+    text-decoration: none;
+    color: #555555;
+    margin-left: 95%;
+    font-size: 18px;
+}
+
+.pickName button:hover {
+    background-color: #4caf50;
+}
+
+.pickName button:active {
+    background-color: #2e7d32;
+}
+
+.Header-wraper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#edit_img {
+    height: 15px;
+    width: 15px;
+    margin-left: 5px;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.delete-animation {
+    animation: go-right 1s ease;
+}
+
+
+@keyframes go-top {
+    0% {
+        opacity: 100%;
+        transform: translateY(0%) translateX(-50%);
+    }
+
+    100% {
+        opacity: 0%;
+        transform: translateY(-100%) translateX(-50%);
+    }
+}
+
+.go-top-animation {
+    animation: go-top 0.6s ease;
+}
+
+.checked {
+    text-decoration: line-through;
+    color: grey;
+    user-select: none;
+}
+
+.checked-animation {
+    animation: done 0.4s ease;
+}
+
+@keyframes done {
+    0% {
+        transform: scale(100%);
+    }
+
+    50% {
+        transform: scale(101%);
+        background-color: lightgreen;
+    }
+
+    100% {
+        transform: scale(100%);
+    }
+}

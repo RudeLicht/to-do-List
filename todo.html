@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="Header-wraper" id="headerWarper">
+        <h3 class="Header" id="projectName"></h3>
+        <a href="#">
+            <img src="edit-button.svg" alt="s" id="edit_img">
+        </a>
+    </div>
+
+
+    <div id="taskCont" class="taskContainer"></div>
+    <div class="buttons" id="all-buttons">
+        <button id="addBtn">+</button>
+        <button id="deleteBtn">-</button>
+    </div>
+
+
+    <div id="pickProjectName" class="pickName">
+        <p>Project Name</p>
+        <input type="text" id="projectNameInput">
+        <button id="submitProjectName">&#x2713;</button>
+    </div>
+
+    <div id="pickTaskName" class="pickName">
+        <a href="#" id="closeTaskName">X</a>
+        <p>Task Name</p>
+        <input type="text" id="taskNameInput">
+        <button id="submitTaskName">&#x2713;</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
