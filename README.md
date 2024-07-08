@@ -21,7 +21,7 @@ Open todo.html
 Open todo.html in your favorite web browser to start using the ToDo List application.
 
 ## Files
-todo.html: The main HTML file for the application.
+todo.html: The main HTML file for the application.\n
 style.css: Contains the styles for the application.
 script.js: JavaScript file that includes the functionality and interactions of the ToDo list.
 
