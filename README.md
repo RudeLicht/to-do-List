@@ -14,7 +14,7 @@ This project is a simple and interactive ToDo List web application built using H
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/todo-list.git
+git clone https://github.com/RudeLicht/todo-list.git
 cd todo-list
 ```
 Open todo.html
